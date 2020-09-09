@@ -80,7 +80,20 @@ def printer(llist, loop=None):
 
 
 def SnakeOrSnail(llist):
-    pass
+    head = llist.head
+    slow_p = head
+    fast_p = head.next
+    advance_slow = False
+    while fast_p is not slow_p and fast_p is not None:
+        fast_p = fast_p.next
+        if advance_slow: slow_p = slow_p.next
+        advance_slow = not (advance_slow)
+    if fast_p is None:
+        print("Snake")
+    else:
+        print("Snail")
+
+
 
 
 if __name__ == "__main__":
@@ -119,5 +132,9 @@ if __name__ == "__main__":
     # s = generator()
     # printer(s)
 
-    printer(snek)
-    printer(snel, n3)
+    #printer(snek)
+    #printer(snel, n3)
+
+    g = generator()
+    printer(SnakeOrSnail(g))
+
