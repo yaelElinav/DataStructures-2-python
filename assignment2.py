@@ -79,7 +79,7 @@ def printer(llist, loop=None):
         print("loop length:{}".format(loop_length))
 
 
-def SnakeOrSnail(head):
+def SnakeOrSnail(llist):
     pass
 
 
